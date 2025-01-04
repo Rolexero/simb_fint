@@ -37,7 +37,7 @@ This project implements a dashboard for a fintech application with features like
 - **State Management**: React Context API (or Redux, if preferred)
 - **API Integration**: Mock REST API (e.g., JSONPlaceholder or custom MockAPI)
 - **Routing**: React Router for navigation between sections
-- **Testing**: Jest and React Testing Library for unit tests
+<!-- - **Testing**: Jest and React Testing Library for unit tests -->
 
 ## Setup Instructions
 
