@@ -1,6 +1,5 @@
 import LoanCard from "@/components/LoanCard";
 import Page from "@/components/Page";
-import React from "react";
 import RecentTransactions from "../Dashboard/components/RecentTransaction";
 
 const LoanPage = () => {

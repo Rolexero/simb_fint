@@ -9,16 +9,20 @@ import {
 import { Button } from "./ui/button";
 import useUserStore from "@/store/useStore";
 
-const getInitials = (name) => {
+const getInitials = (name: any) => {
   if (!name) return "";
   const nameParts = name.split(" ");
-  return nameParts
-    .map((part) => part[0])
-    .join("")
-    .toUpperCase();
+  return (
+    nameParts
+      //   @ts-ignore
+      .map((part) => part[0])
+      .join("")
+      .toUpperCase()
+  );
 };
 
 export default function ProfileDropdown() {
+  // @ts-ignore
   const currentUser = useUserStore((state) => state.currentUser);
 
   console.log(currentUser);

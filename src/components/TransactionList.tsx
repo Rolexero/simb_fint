@@ -10,11 +10,8 @@ import {
 } from "@/components/ui/table";
 import { fetchTransactionsInfo } from "@/service/request";
 import { useQuery } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
 
 export default function TransactionList({ transactionType }: any) {
-  const navigate = useNavigate();
-
   const { data } = useQuery({
     queryKey: ["get-transactions"], // Query key as an array
     queryFn: () => fetchTransactionsInfo(),
@@ -37,10 +34,10 @@ export default function TransactionList({ transactionType }: any) {
           <TableBody>
             {(transactionType
               ? data?.filter(
-                  (transaction) => transaction?.type == transactionType
+                  (transaction: any) => transaction?.type == transactionType
                 )
               : data
-            )?.map((data, index) => (
+            )?.map((data: any, index: any) => (
               <TableRow
                 key={index}
                 // onClick={() => navigate(`/transactions/${data.id}`)}

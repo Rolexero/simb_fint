@@ -20,6 +20,7 @@ import useUserStore from "@/store/useStore";
 // import { AppSidebar } from "./app-Sidebar";
 
 export default function DashboardLayout(props: Props) {
+  // @ts-ignore
   const setCurrentUser = useUserStore((state) => state.setCurrentUser);
 
   const { profileDropdown } = props;

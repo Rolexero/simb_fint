@@ -6,9 +6,9 @@ import Page from "@/components/Page";
 import BalanceCard from "./components/BalanceCard";
 import useUserStore from "@/store/useStore";
 import RecentTransactions from "./components/RecentTransaction";
-import LoanCard from "@/components/LoanCard";
 
 export default function Dashboard() {
+  // @ts-ignore
   const currentUser = useUserStore((state) => state.currentUser);
 
   return (

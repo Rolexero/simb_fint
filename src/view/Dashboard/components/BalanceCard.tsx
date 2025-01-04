@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { fetchUsersInfo } from "@/service/request";
-import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 
 export default function BalanceCard({ balance }: any) {
