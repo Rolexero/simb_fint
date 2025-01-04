@@ -49,7 +49,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton size="lg" asChild>
               <Link to="/dashboard">
                 <img
-                  src="/src//assets/simbrella_ng.jpeg"
+                  src="/src/assets/simbrella_ng.jpeg"
                   width={30}
                   height={30}
                 />

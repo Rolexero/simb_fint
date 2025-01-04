@@ -32,7 +32,7 @@ This project implements a dashboard for a fintech application with features like
 
 ## Technical Stack
 
-- **Frontend Framework**: React with TypeScript
+- **Frontend Framework**: React(Vite) with TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: React Context API (or Redux, if preferred)
 - **API Integration**: Mock REST API (e.g., JSONPlaceholder or custom MockAPI)
