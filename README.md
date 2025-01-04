@@ -39,10 +39,10 @@ This project implements a dashboard for a fintech application with features like
 - **Routing**: React Router for navigation between sections
 <!-- - **Testing**: Jest and React Testing Library for unit tests -->
 
-## Setup Instructions
+<!-- ## Setup Instructions
 
 ### 1. Clone the repository
 
 ```bash
 
-```
+``` -->
