@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Fintech Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project implements a dashboard for a fintech application with features like user overview, loan management, transaction history, and responsive design. The dashboard fetches data from a mock REST API, allowing users to interact with their data, request loans, and view transaction history.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features:
 
-## Expanding the ESLint configuration
+1. **User Overview Section**  
+   Displays basic user information including:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   - Name
+   - Account balance
+   - Recent transactions
 
-- Configure the top-level `parserOptions` property like this:
+2. **Loan Management Section**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   - View loan history and details of active loans.
+   - Request new loans with input validation for:
+     - Amount
+     - Tenure
+     - Purpose
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **Transaction History Section**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   - Render a table showing recent transactions with the ability to:
+     - Sort by date, amount, or transaction type
+     - Filter by transaction type (credit/debit)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+4. **Responsive Design**  
+   The application is fully responsive and works seamlessly across desktop, tablet, and mobile devices.
+
+## Technical Stack
+
+- **Frontend Framework**: React with TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: React Context API (or Redux, if preferred)
+- **API Integration**: Mock REST API (e.g., JSONPlaceholder or custom MockAPI)
+- **Routing**: React Router for navigation between sections
+- **Testing**: Jest and React Testing Library for unit tests
+
+## Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+
 ```
