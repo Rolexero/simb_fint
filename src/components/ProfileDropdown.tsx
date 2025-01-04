@@ -1,8 +1,5 @@
 import {
   DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -38,13 +35,13 @@ export default function ProfileDropdown() {
           {currentUser ? getInitials(currentUser[0]?.Name) : ""}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      {/* <DropdownMenuContent align="end">
         <DropdownMenuItem>Profile</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>Switch to Customer Profile</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem className="text-destructive">Logout</DropdownMenuItem>
-      </DropdownMenuContent>
+      </DropdownMenuContent> */}
     </DropdownMenu>
   );
 }
