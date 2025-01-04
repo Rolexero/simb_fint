@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Bot, LogOut, Settings2, SquareTerminal } from "lucide-react";
+import { Bot, LogOut, SquareTerminal } from "lucide-react";
 // import { NavMain } from "@/components/nav-main";
 
 import {
@@ -23,38 +23,17 @@ const data = {
       title: "Dashboard",
       url: "/dashboard",
       icon: SquareTerminal,
-      items: [
-        {
-          title: "Dashboard",
-          url: "/dashboard",
-        },
-      ],
-    },
-    {
-      title: "Products",
-      url: "/products",
-      icon: Bot,
-      items: [
-        {
-          title: "Loan Management",
-          url: "/loans-mgt",
-        },
-        {
-          title: "Transaction",
-          url: "/transaction",
-        },
-      ],
     },
     {
       title: "Transactions",
       url: "/transactions",
       icon: Bot,
-      items: [
-        {
-          title: "Transactions List",
-          url: "/transactions",
-        },
-      ],
+    },
+
+    {
+      title: "Loans",
+      url: "/loans",
+      icon: Bot,
     },
   ],
 };

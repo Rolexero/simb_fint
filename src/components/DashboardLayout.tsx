@@ -14,10 +14,30 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "./AppSidebar";
+import { fetchUsersInfo } from "@/service/request";
+import { useQuery } from "@tanstack/react-query";
+import useUserStore from "@/store/useStore";
 // import { AppSidebar } from "./app-Sidebar";
 
 export default function DashboardLayout(props: Props) {
-  const { profileDropdown, themeSelector } = props;
+  const setCurrentUser = useUserStore((state) => state.setCurrentUser);
+
+  const { profileDropdown } = props;
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["get-user"], // Query key as an array
+    queryFn: () => fetchUsersInfo(),
+  });
+
+  console.log(data);
+
+  // Update Zustand state when `data` changes
+  React.useEffect(() => {
+    if (data) {
+      setCurrentUser(data);
+    }
+  }, [data, setCurrentUser]);
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -39,7 +59,7 @@ export default function DashboardLayout(props: Props) {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <React.Suspense fallback={<LoadingView loading />}>
-            <Outlet />
+            {isLoading ? <LoadingView loading /> : <Outlet />}
           </React.Suspense>
         </div>
       </SidebarInset>

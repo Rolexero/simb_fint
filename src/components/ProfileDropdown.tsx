@@ -7,8 +7,22 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { Button } from "./ui/button";
+import useUserStore from "@/store/useStore";
+
+const getInitials = (name) => {
+  if (!name) return "";
+  const nameParts = name.split(" ");
+  return nameParts
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+};
 
 export default function ProfileDropdown() {
+  const currentUser = useUserStore((state) => state.currentUser);
+
+  console.log(currentUser);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -17,7 +31,7 @@ export default function ProfileDropdown() {
           size="icon"
           className="overflow-hidden rounded-full"
         >
-          TB
+          {currentUser ? getInitials(currentUser[0]?.Name) : ""}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

@@ -39,9 +39,13 @@ export function NavMain({
                 isMobile && toggleSidebar();
               }}
             >
-              <Link to={item.url}>
-                <span>{item.title}</span>
-              </Link>
+              <div>
+                {item.icon && <item.icon />}
+
+                <Link to={item.url}>
+                  <span>{item.title}</span>
+                </Link>
+              </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
         ))}
