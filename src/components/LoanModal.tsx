@@ -70,7 +70,7 @@ export function DrawerDialogDemo({ open, setOpen }: any) {
   );
 }
 
-function LoanForm({ setOpen }: any) {
+export function LoanForm({ setOpen }: any) {
   const formik = useFormik({
     initialValues: {
       amount: "",
