@@ -48,11 +48,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link to="/dashboard">
-                <img
+                {/* <img
                   src="/src/assets/simbrella_ng.jpeg"
                   width={30}
                   height={30}
-                />
+                /> */}
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">
                     SimbrellaFinApp

@@ -48,9 +48,9 @@ export function DrawerDialogDemo({ open, setOpen }: any) {
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild>
+      {/* <DrawerTrigger asChild>
         <Button variant="outline">Edit Profile</Button>
-      </DrawerTrigger>
+      </DrawerTrigger> */}
       <DrawerContent>
         <DrawerHeader className="text-left">
           <DrawerTitle>Request New Loan</DrawerTitle>
